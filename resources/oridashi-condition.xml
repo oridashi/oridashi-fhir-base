@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="oridashi-condition" />
+  <meta>
+    <lastUpdated value="2017-08-12T02:06:37.807+10:00" />
+  </meta>
+  <text>
+    <status value="generated" /><div xmlns="http://www.w3.org/1999/xhtml">
+  <p>Allergy intolerance</p>
+</div></text>
+  <url value="http://oridashi.com.au/fhir/StructureDefinition/oridashi-condition" />
+  <name value="Oridashi Condition" />
+  <status value="draft" />
+  <date value="2017-08-12T01:59:30.597+10:00" />
+  <description value="Problems, diagnoses and conditions" />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Condition" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Condition" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Condition.identifier">
+      <path value="Condition.identifier" />
+      <max value="0" />
+    </element>
+    <element id="Condition.clinicalStatus">
+      <path value="Condition.clinicalStatus" />
+      <min value="1" />
+    </element>
+    <element id="Condition.verificationStatus">
+      <path value="Condition.verificationStatus" />
+      <min value="1" />
+    </element>
+    <element id="Condition.category">
+      <path value="Condition.category" />
+      <min value="1" />
+      <max value="1" />
+      <fixedCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="439401001" />
+          <display value="Diagnosis" />
+        </coding>
+      </fixedCodeableConcept>
+    </element>
+    <element id="Condition.code">
+      <path value="Condition.code" />
+      <min value="1" />
+    </element>
+    <element id="Condition.bodySite">
+      <path value="Condition.bodySite" />
+      <max value="0" />
+    </element>
+    <element id="Condition.subject">
+      <path value="Condition.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://oridashi.com.au/fhir/StructureDefinition/oridashi-patient" />
+      </type>
+    </element>
+    <element id="Condition.context">
+      <path value="Condition.context" />
+      <max value="0" />
+    </element>
+    <element id="Condition.onset[x]:onsetDateTime">
+      <path value="Condition.onsetDateTime" />
+      <sliceName value="onsetDateTime" />
+      <type>
+        <code value="dateTime" />
+      </type>
+    </element>
+    <element id="Condition.abatement[x]:abatementBoolean">
+      <path value="Condition.abatementBoolean" />
+      <sliceName value="abatementBoolean" />
+      <min value="1" />
+      <type>
+        <code value="boolean" />
+      </type>
+    </element>
+    <element id="Condition.assertedDate">
+      <path value="Condition.assertedDate" />
+      <max value="0" />
+    </element>
+    <element id="Condition.asserter">
+      <path value="Condition.asserter" />
+      <max value="0" />
+    </element>
+    <element id="Condition.stage">
+      <path value="Condition.stage" />
+      <max value="0" />
+    </element>
+    <element id="Condition.evidence">
+      <path value="Condition.evidence" />
+      <max value="0" />
+    </element>
+    <element id="Condition.note">
+      <path value="Condition.note" />
+      <max value="1" />
+    </element>
+  </differential>
+</StructureDefinition>

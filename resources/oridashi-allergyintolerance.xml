@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="oridashi-allergyintolerance" />
+  <meta>
+    <lastUpdated value="2017-08-12T01:50:45.315+10:00" />
+  </meta>
+  <text>
+    <status value="generated" /><div xmlns="http://www.w3.org/1999/xhtml">
+  <p>Allergy intolerance</p>
+</div></text>
+  <url value="http://oridashi.com.au/fhir/StructureDefinition/oridashi-allergyintolerance" />
+  <name value="Oridashi Allergy Intolerance" />
+  <status value="draft" />
+  <date value="2017-08-12T01:39:22.041+10:00" />
+  <description value="Allergies and intolerances" />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="AllergyIntolerance" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/AllergyIntolerance" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="AllergyIntolerance.identifier">
+      <path value="AllergyIntolerance.identifier" />
+      <max value="0" />
+    </element>
+    <element id="AllergyIntolerance.clinicalStatus">
+      <path value="AllergyIntolerance.clinicalStatus" />
+      <min value="1" />
+      <fixedCode value="active" />
+    </element>
+    <element id="AllergyIntolerance.verificationStatus">
+      <path value="AllergyIntolerance.verificationStatus" />
+      <fixedCode value="confirmed " />
+    </element>
+    <element id="AllergyIntolerance.category">
+      <path value="AllergyIntolerance.category" />
+      <max value="1" />
+    </element>
+    <element id="AllergyIntolerance.criticality">
+      <path value="AllergyIntolerance.criticality" />
+      <min value="1" />
+    </element>
+    <element id="AllergyIntolerance.code">
+      <path value="AllergyIntolerance.code" />
+      <min value="1" />
+    </element>
+    <element id="AllergyIntolerance.patient">
+      <path value="AllergyIntolerance.patient" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://oridashi.com.au/fhir/StructureDefinition/oridashi-patient" />
+      </type>
+    </element>
+    <element id="AllergyIntolerance.onset[x]">
+      <path value="AllergyIntolerance.onset[x]" />
+      <max value="0" />
+    </element>
+    <element id="AllergyIntolerance.assertedDate">
+      <path value="AllergyIntolerance.assertedDate" />
+      <min value="1" />
+    </element>
+    <element id="AllergyIntolerance.recorder">
+      <path value="AllergyIntolerance.recorder" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://oridashi.com.au/fhir/StructureDefinition/oridashi-practitioner" />
+      </type>
+    </element>
+    <element id="AllergyIntolerance.asserter">
+      <path value="AllergyIntolerance.asserter" />
+      <max value="0" />
+    </element>
+    <element id="AllergyIntolerance.lastOccurrence">
+      <path value="AllergyIntolerance.lastOccurrence" />
+      <max value="0" />
+    </element>
+    <element id="AllergyIntolerance.note">
+      <path value="AllergyIntolerance.note" />
+      <max value="1" />
+    </element>
+    <element id="AllergyIntolerance.reaction">
+      <path value="AllergyIntolerance.reaction" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+  </differential>
+</StructureDefinition>

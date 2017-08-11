@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="oridashi-practitionerrole" />
+  <meta>
+    <lastUpdated value="2017-08-12T01:05:16.675+10:00" />
+  </meta>
+  <text>
+    <status value="generated" /><div xmlns="http://www.w3.org/1999/xhtml">
+  <p>Individual provider of services</p>
+</div></text>
+  <url value="http://oridashi.com.au/fhir/StructureDefinition/oridashi-practitionerrole" />
+  <name value="Oridashi Provider" />
+  <status value="draft" />
+  <date value="2017-06-09T16:36:38.9010786+10:00" />
+  <description value="Provider of healthcare services " />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="PractitionerRole" />
+  <baseDefinition value="http://hl7.org.au/fhir/StructureDefinition/au-practitionerrole" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="PractitionerRole.identifier.provider-number">
+      <path value="PractitionerRole.identifier" />
+      <sliceName value="provider-number" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.identifier:provider-number.use">
+      <path value="PractitionerRole.identifier.use" />
+      <min value="1" />
+      <fixedCode value="usual" />
+    </element>
+    <element id="PractitionerRole.identifier:provider-number.period">
+      <path value="PractitionerRole.identifier.period" />
+      <max value="0" />
+    </element>
+    <element id="PractitionerRole.identifier:provider-number.assigner">
+      <path value="PractitionerRole.identifier.assigner" />
+      <max value="0" />
+    </element>
+    <element id="PractitionerRole.active">
+      <path value="PractitionerRole.active" />
+      <min value="1" />
+    </element>
+    <element id="PractitionerRole.period">
+      <path value="PractitionerRole.period" />
+      <max value="0" />
+    </element>
+    <element id="PractitionerRole.practitioner">
+      <path value="PractitionerRole.practitioner" />
+      <short value="Practitioner in the role" />
+      <definition value="Australian practitioner directory entry in this role." />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://oridashi.com.au/fhir/StructureDefinition/oridashi-practitioner" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.organization">
+      <path value="PractitionerRole.organization" />
+      <short value="Organisation providing this role" />
+      <definition value="Australian organisation directory entry providing this role." />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://oridashi.com.au/fhir/StructureDefinition/oridashi-organisation" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.specialty">
+      <path value="PractitionerRole.specialty" />
+      <short value="Specific specialties of the practitioner" />
+      <definition value="Specialties define the advertised capabilities of the practitioner in this role." />
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.specialty:specialty-role">
+      <path value="PractitionerRole.specialty" />
+      <sliceName value="specialty-role" />
+      <max value="0" />
+    </element>
+    <element id="PractitionerRole.location">
+      <path value="PractitionerRole.location" />
+      <short value="Location at which this role is provided" />
+      <definition value="Location details describing where the role is being provided." />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://oridashi.com.au/fhir/StructureDefinition/oridashi-location" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.healthcareService">
+      <path value="PractitionerRole.healthcareService" />
+      <max value="0" />
+    </element>
+    <element id="PractitionerRole.telecom">
+      <path value="PractitionerRole.telecom" />
+      <short value="Contact details for the practitioner in this role." />
+      <definition value="Details for contacting the practitioner in this role." />
+      <max value="0" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.availableTime">
+      <path value="PractitionerRole.availableTime" />
+      <max value="0" />
+    </element>
+    <element id="PractitionerRole.notAvailable">
+      <path value="PractitionerRole.notAvailable" />
+      <max value="0" />
+    </element>
+    <element id="PractitionerRole.availabilityExceptions">
+      <path value="PractitionerRole.availabilityExceptions" />
+      <max value="0" />
+    </element>
+    <element id="PractitionerRole.endpoint">
+      <path value="PractitionerRole.endpoint" />
+      <short value="Service based communication points" />
+      <definition value="Details for service based communication with the practitioner in this role. This can include web services, messaging profiles and other protocol based communication." />
+      <max value="0" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-pd-sm-endpoint" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Endpoint" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>

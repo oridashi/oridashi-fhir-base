@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="oridashi-organisation" />
+  <meta>
+    <lastUpdated value="2017-08-12T00:45:23.533+10:00" />
+  </meta>
+  <text>
+    <status value="generated" /><div xmlns="http://www.w3.org/1999/xhtml">
+  <p>Clinic or practice</p>
+</div></text>
+  <url value="http://oridashi.com.au/fhir/StructureDefinition/oridashi-organisation" />
+  <name value="Oridashi Clinic Organisation" />
+  <title value="Oridashi Clinic or Practice Organisation" />
+  <status value="draft" />
+  <date value="2017-08-11" />
+  <description value="Clinic or practice organisation" />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Organization" />
+  <baseDefinition value="http://hl7.org.au/fhir/StructureDefinition/au-organisation" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Organization">
+      <path value="Organization" />
+      <short value="Profile for clinic or practice" />
+      <definition value="Oridashi profile for the clinic/practice organisation" />
+    </element>
+    <element id="Organization.identifier:hpio">
+      <path value="Organization.identifier" />
+      <sliceName value="hpio" />
+      <definition value="Health Provider Identifier for Organisation" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.identifier:hpio.use">
+      <path value="Organization.identifier.use" />
+      <min value="1" />
+      <fixedCode value="usual" />
+    </element>
+    <element id="Organization.identifier:hpio.period">
+      <path value="Organization.identifier.period" />
+      <max value="0" />
+    </element>
+    <element id="Organization.identifier:hpio.assigner">
+      <path value="Organization.identifier.assigner" />
+      <max value="0" />
+    </element>
+    <element id="Organization.identifier:abn">
+      <path value="Organization.identifier" />
+      <sliceName value="abn" />
+      <max value="0" />
+    </element>
+    <element id="Organization.identifier:acn">
+      <path value="Organization.identifier" />
+      <sliceName value="acn" />
+      <max value="0" />
+    </element>
+    <element id="Organization.identifier:arbn">
+      <path value="Organization.identifier" />
+      <sliceName value="arbn" />
+      <max value="0" />
+    </element>
+    <element id="Organization.identifier:PAI-O">
+      <path value="Organization.identifier" />
+      <sliceName value="PAI-O" />
+      <max value="0" />
+    </element>
+    <element id="Organization.identifier:csp">
+      <path value="Organization.identifier" />
+      <sliceName value="csp" />
+      <max value="0" />
+    </element>
+    <element id="Organization.identifier:siteidentifier">
+      <path value="Organization.identifier" />
+      <sliceName value="siteidentifier" />
+      <short value="Vendor site identifier" />
+      <definition value="A site identifier allocated by the clinical system vendor" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Organization.identifier:siteidentifier.use">
+      <path value="Organization.identifier.use" />
+      <min value="1" />
+      <fixedCode value="usual" />
+    </element>
+    <element id="Organization.identifier:siteidentifier.type">
+      <path value="Organization.identifier.type" />
+      <max value="0" />
+    </element>
+    <element id="Organization.identifier:siteidentifier.system">
+      <path value="Organization.identifier.system" />
+      <short value="Vendor site identifier namespace" />
+      <definition value="Vendor site identifier namespace" />
+      <min value="1" />
+      <fixedUri value="http://oridashi.com.au/id/siteid" />
+    </element>
+    <element id="Organization.identifier:siteidentifier.value">
+      <path value="Organization.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="Organization.identifier:siteidentifier.period">
+      <path value="Organization.identifier.period" />
+      <max value="0" />
+    </element>
+    <element id="Organization.identifier:siteidentifier.assigner">
+      <path value="Organization.identifier.assigner" />
+      <max value="0" />
+    </element>
+    <element id="Organization.identifier:facilityidentifier">
+      <path value="Organization.identifier" />
+      <sliceName value="facilityidentifier" />
+      <short value="Unique facility identifier" />
+      <definition value="A facility identifier unique to the clinic" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Organization.identifier:facilityidentifier.use">
+      <path value="Organization.identifier.use" />
+      <min value="1" />
+      <fixedCode value="usual" />
+    </element>
+    <element id="Organization.identifier:facilityidentifier.type">
+      <path value="Organization.identifier.type" />
+      <min value="1" />
+    </element>
+    <element id="Organization.identifier:facilityidentifier.type.coding">
+      <path value="Organization.identifier.type.coding" />
+      <max value="0" />
+    </element>
+    <element id="Organization.identifier:facilityidentifier.type.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Organization.identifier.type.text" />
+      <min value="1" />
+      <fixedString value="Facility Id" />
+    </element>
+    <element id="Organization.identifier:facilityidentifier.system">
+      <path value="Organization.identifier.system" />
+      <min value="1" />
+      <fixedUri value="http://oridashi.com.au/id/facilityid" />
+    </element>
+    <element id="Organization.identifier:facilityidentifier.value">
+      <path value="Organization.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="Organization.identifier:facilityidentifier.period">
+      <path value="Organization.identifier.period" />
+      <max value="0" />
+    </element>
+    <element id="Organization.identifier:facilityidentifier.assigner">
+      <path value="Organization.identifier.assigner" />
+      <max value="0" />
+    </element>
+    <element id="Organization.active">
+      <path value="Organization.active" />
+      <min value="1" />
+      <mustSupport value="false" />
+    </element>
+    <element id="Organization.name">
+      <path value="Organization.name" />
+      <min value="1" />
+      <mustSupport value="false" />
+    </element>
+    <element id="Organization.alias">
+      <path value="Organization.alias" />
+      <max value="0" />
+    </element>
+    <element id="Organization.telecom">
+      <path value="Organization.telecom" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="use" />
+        </discriminator>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <max value="3" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.telecom:phone">
+      <path value="Organization.telecom" />
+      <sliceName value="phone" />
+      <max value="1" />
+    </element>
+    <element id="Organization.telecom:phone.system">
+      <path value="Organization.telecom.system" />
+      <min value="1" />
+      <fixedCode value="phone" />
+    </element>
+    <element id="Organization.telecom:phone.value">
+      <path value="Organization.telecom.value" />
+      <min value="1" />
+    </element>
+    <element id="Organization.telecom:phone.use">
+      <path value="Organization.telecom.use" />
+      <min value="1" />
+      <fixedCode value="work" />
+    </element>
+    <element id="Organization.telecom:phone.rank">
+      <path value="Organization.telecom.rank" />
+      <max value="0" />
+    </element>
+    <element id="Organization.telecom:phone.period">
+      <path value="Organization.telecom.period" />
+      <max value="0" />
+    </element>
+    <element id="Organization.telecom:fax">
+      <path value="Organization.telecom" />
+      <sliceName value="fax" />
+      <max value="1" />
+    </element>
+    <element id="Organization.telecom:fax.system">
+      <path value="Organization.telecom.system" />
+      <min value="1" />
+      <fixedCode value="fax" />
+    </element>
+    <element id="Organization.telecom:fax.value">
+      <path value="Organization.telecom.value" />
+      <min value="1" />
+    </element>
+    <element id="Organization.telecom:fax.use">
+      <path value="Organization.telecom.use" />
+      <min value="1" />
+      <fixedCode value="work" />
+    </element>
+    <element id="Organization.telecom:fax.rank">
+      <path value="Organization.telecom.rank" />
+      <max value="0" />
+    </element>
+    <element id="Organization.telecom:fax.period">
+      <path value="Organization.telecom.period" />
+      <max value="0" />
+    </element>
+    <element id="Organization.telecom:email">
+      <path value="Organization.telecom" />
+      <sliceName value="email" />
+      <max value="1" />
+    </element>
+    <element id="Organization.telecom:email.system">
+      <path value="Organization.telecom.system" />
+      <min value="1" />
+      <fixedCode value="email" />
+    </element>
+    <element id="Organization.telecom:email.value">
+      <path value="Organization.telecom.value" />
+      <min value="1" />
+    </element>
+    <element id="Organization.telecom:email.use">
+      <path value="Organization.telecom.use" />
+      <min value="1" />
+      <fixedCode value="work" />
+    </element>
+    <element id="Organization.telecom:email.rank">
+      <path value="Organization.telecom.rank" />
+      <max value="0" />
+    </element>
+    <element id="Organization.telecom:email.period">
+      <path value="Organization.telecom.period" />
+      <max value="0" />
+    </element>
+    <element id="Organization.address">
+      <path value="Organization.address" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address.use">
+      <path value="Organization.address.use" />
+      <min value="1" />
+      <fixedCode value="work" />
+    </element>
+    <element id="Organization.address.type">
+      <path value="Organization.address.type" />
+      <max value="0" />
+    </element>
+    <element id="Organization.address.text">
+      <path value="Organization.address.text" />
+      <max value="0" />
+    </element>
+    <element id="Organization.address.line">
+      <path value="Organization.address.line" />
+      <max value="2" />
+    </element>
+    <element id="Organization.address.city">
+      <path value="Organization.address.city" />
+      <min value="1" />
+    </element>
+    <element id="Organization.address.district">
+      <path value="Organization.address.district" />
+      <max value="0" />
+    </element>
+    <element id="Organization.address.state">
+      <path value="Organization.address.state" />
+      <min value="1" />
+    </element>
+    <element id="Organization.address.postalCode">
+      <path value="Organization.address.postalCode" />
+      <min value="1" />
+    </element>
+    <element id="Organization.address.country">
+      <path value="Organization.address.country" />
+      <max value="0" />
+    </element>
+    <element id="Organization.address.period">
+      <path value="Organization.address.period" />
+      <max value="0" />
+    </element>
+    <element id="Organization.partOf">
+      <path value="Organization.partOf" />
+      <max value="0" />
+    </element>
+    <element id="Organization.contact">
+      <path value="Organization.contact" />
+      <max value="0" />
+    </element>
+    <element id="Organization.endpoint">
+      <path value="Organization.endpoint" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="oridashi-location" />
+  <meta>
+    <lastUpdated value="2017-08-12T01:05:19.375+10:00" />
+  </meta>
+  <text>
+    <status value="generated" /><div xmlns="http://www.w3.org/1999/xhtml">
+  <p>Clinic location</p>
+</div></text>
+  <url value="http://oridashi.com.au/fhir/StructureDefinition/oridashi-location" />
+  <name value="Oridashi Location" />
+  <title value="Australian Location Directory Entry" />
+  <status value="draft" />
+  <date value="2017-06-09T16:42:26.8092574+10:00" />
+  <description value="Location details for the clinic" />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Location" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Location" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Location">
+      <path value="Location" />
+      <short value="Australian Location Directory Entry" />
+    </element>
+    <element id="Location.identifier">
+      <path value="Location.identifier" />
+      <max value="0" />
+    </element>
+    <element id="Location.status">
+      <path value="Location.status" />
+      <min value="1" />
+      <fixedCode value="active" />
+    </element>
+    <element id="Location.operationalStatus">
+      <path value="Location.operationalStatus" />
+      <max value="0" />
+    </element>
+    <element id="Location.name">
+      <path value="Location.name" />
+      <min value="1" />
+    </element>
+    <element id="Location.alias">
+      <path value="Location.alias" />
+      <max value="0" />
+    </element>
+    <element id="Location.description">
+      <path value="Location.description" />
+      <max value="0" />
+    </element>
+    <element id="Location.mode">
+      <path value="Location.mode" />
+      <min value="1" />
+      <fixedCode value="instance" />
+    </element>
+    <element id="Location.type">
+      <path value="Location.type" />
+      <max value="0" />
+    </element>
+    <element id="Location.address">
+      <path value="Location.address" />
+      <short value="Australian location" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Location.physicalType">
+      <path value="Location.physicalType" />
+      <max value="0" />
+    </element>
+    <element id="Location.position">
+      <path value="Location.position" />
+      <max value="0" />
+    </element>
+    <element id="Location.managingOrganization">
+      <path value="Location.managingOrganization" />
+      <min value="1" />
+    </element>
+    <element id="Location.partOf">
+      <path value="Location.partOf" />
+      <max value="0" />
+    </element>
+    <element id="Location.endpoint">
+      <path value="Location.endpoint" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>
