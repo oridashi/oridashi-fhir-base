@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="oridashi-location" />
   <meta>
-    <lastUpdated value="2017-08-12T23:27:19.889+10:00" />
+    <lastUpdated value="2017-08-14T12:29:19.871+10:00" />
   </meta>
   <text>
     <status value="generated" /><div xmlns="http://www.w3.org/1999/xhtml">
@@ -64,7 +64,6 @@
       <path value="Location.address" />
       <short value="Australian location" />
       <min value="1" />
-      <mustSupport value="true" />
     </element>
     <element id="Location.physicalType">
       <path value="Location.physicalType" />
