@@ -7,9 +7,9 @@
 {:toc}
 
 ## Introduction
-This guide describes the Oridashi-Hiasobi profiled interface to Australian primary care systems.
+This guide describes the Oridashi-Hiasobi profiled interface to Australian primary care systems.  
 
-The interface is based on the [HL7 FHIR<sup>&reg;&copy;</sup> STU3](http://hl7.org/fhir/STU3/index.html) publication
+It describes product scope and support for elements of the [HL7 FHIR<sup>&reg;&copy;</sup> STU3](http://hl7.org/fhir/STU3/index.html) published core specification.
 
 ## Usage
 
