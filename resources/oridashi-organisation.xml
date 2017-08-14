@@ -1,8 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="oridashi-organisation" />
   <meta>
-    <lastUpdated value="2017-08-12T00:45:23.533+10:00" />
+    <lastUpdated value="2017-08-12T23:22:18.815+10:00" />
   </meta>
   <text>
     <status value="generated" /><div xmlns="http://www.w3.org/1999/xhtml">
@@ -10,7 +10,7 @@
 </div></text>
   <url value="http://oridashi.com.au/fhir/StructureDefinition/oridashi-organisation" />
   <name value="Oridashi Clinic Organisation" />
-  <title value="Oridashi Clinic or Practice Organisation" />
+  <title value="Oridashi Clinic Organisation" />
   <status value="draft" />
   <date value="2017-08-11" />
   <description value="Clinic or practice organisation" />
@@ -28,9 +28,9 @@
     </element>
     <element id="Organization.identifier:hpio">
       <path value="Organization.identifier" />
-      <sliceName value="hpio" />
+      <sliceName value="HPI-O" />
+      <short value = "HPI-O"/>
       <definition value="Health Provider Identifier for Organisation" />
-      <mustSupport value="true" />
     </element>
     <element id="Organization.identifier:hpio.use">
       <path value="Organization.identifier.use" />
@@ -48,26 +48,31 @@
     <element id="Organization.identifier:abn">
       <path value="Organization.identifier" />
       <sliceName value="abn" />
+       <short value="Excluded ABN identifier" />
       <max value="0" />
     </element>
     <element id="Organization.identifier:acn">
       <path value="Organization.identifier" />
       <sliceName value="acn" />
+      <short value="Excluded ACN identifier" />
       <max value="0" />
     </element>
     <element id="Organization.identifier:arbn">
       <path value="Organization.identifier" />
       <sliceName value="arbn" />
+        <short value="Excluded ARBN identifier" />
       <max value="0" />
     </element>
     <element id="Organization.identifier:PAI-O">
       <path value="Organization.identifier" />
       <sliceName value="PAI-O" />
+        <short value="Excluded PAI-O identifier" />
       <max value="0" />
     </element>
     <element id="Organization.identifier:csp">
       <path value="Organization.identifier" />
       <sliceName value="csp" />
+        <short value="Excluded CSP identifier" />
       <max value="0" />
     </element>
     <element id="Organization.identifier:siteidentifier">
@@ -83,19 +88,20 @@
       <min value="1" />
       <fixedCode value="usual" />
     </element>
-    <element id="Organization.identifier:siteidentifier.type">
+     <element id="Organization.identifier:siteidentifier.type">
       <path value="Organization.identifier.type" />
       <max value="0" />
     </element>
     <element id="Organization.identifier:siteidentifier.system">
       <path value="Organization.identifier.system" />
-      <short value="Vendor site identifier namespace" />
+      <short value="Namespace uri for Vendor Site Identifier" />
       <definition value="Vendor site identifier namespace" />
       <min value="1" />
       <fixedUri value="http://oridashi.com.au/id/siteid" />
     </element>
     <element id="Organization.identifier:siteidentifier.value">
       <path value="Organization.identifier.value" />
+      <definition value="Identifier for the organization that is used to identify the organization across multiple disparate systems." />
       <min value="1" />
     </element>
     <element id="Organization.identifier:siteidentifier.period">
@@ -121,27 +127,18 @@
     </element>
     <element id="Organization.identifier:facilityidentifier.type">
       <path value="Organization.identifier.type" />
-      <min value="1" />
-    </element>
-    <element id="Organization.identifier:facilityidentifier.type.coding">
-      <path value="Organization.identifier.type.coding" />
       <max value="0" />
-    </element>
-    <element id="Organization.identifier:facilityidentifier.type.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="Organization.identifier.type.text" />
-      <min value="1" />
-      <fixedString value="Facility Id" />
     </element>
     <element id="Organization.identifier:facilityidentifier.system">
       <path value="Organization.identifier.system" />
+      <short value="Namespace uri for facility identifier" />
+      <definition value="A unique identifier for the facility that can be used for reference to the system." />
       <min value="1" />
       <fixedUri value="http://oridashi.com.au/id/facilityid" />
     </element>
     <element id="Organization.identifier:facilityidentifier.value">
       <path value="Organization.identifier.value" />
+      <definition value="Identifier for the organization that is used to identify the organization across multiple disparate systems." />
       <min value="1" />
     </element>
     <element id="Organization.identifier:facilityidentifier.period">
@@ -180,7 +177,6 @@
         <rules value="open" />
       </slicing>
       <max value="3" />
-      <mustSupport value="true" />
     </element>
     <element id="Organization.telecom:phone">
       <path value="Organization.telecom" />
@@ -267,7 +263,6 @@
       <path value="Organization.address" />
       <min value="1" />
       <max value="1" />
-      <mustSupport value="true" />
     </element>
     <element id="Organization.address.use">
       <path value="Organization.address.use" />

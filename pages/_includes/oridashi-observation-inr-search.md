@@ -1,0 +1,2 @@
+INR Search Details
+		

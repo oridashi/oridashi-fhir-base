@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="oridashi-condition" />
   <meta>
-    <lastUpdated value="2017-08-12T02:06:37.807+10:00" />
+    <lastUpdated value="2017-08-12T23:21:38.782+10:00" />
   </meta>
   <text>
     <status value="generated" /><div xmlns="http://www.w3.org/1999/xhtml">
@@ -10,6 +10,7 @@
 </div></text>
   <url value="http://oridashi.com.au/fhir/StructureDefinition/oridashi-condition" />
   <name value="Oridashi Condition" />
+  <title value="Oridashi Condition" />
   <status value="draft" />
   <date value="2017-08-12T01:59:30.597+10:00" />
   <description value="Problems, diagnoses and conditions" />
@@ -20,6 +21,11 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Condition" />
   <derivation value="constraint" />
   <differential>
+    <element id="Condition">
+      <path value="Condition" />
+      <short value="Condition, Problem, Diagnosis" />
+      <definition value="GP system condition, problem, diagnosis." />
+    </element>
     <element id="Condition.identifier">
       <path value="Condition.identifier" />
       <max value="0" />

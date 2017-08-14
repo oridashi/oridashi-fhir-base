@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="oridashi-patient" />
   <meta>
-    <lastUpdated value="2017-08-12T01:34:02.125+10:00" />
+    <lastUpdated value="2017-08-14T11:07:25.278+10:00" />
   </meta>
   <text>
     <status value="generated" /><div xmlns="http://www.w3.org/1999/xhtml">
@@ -10,6 +10,7 @@
 </div></text>
   <url value="http://oridashi.com.au/fhir/StructureDefinition/oridashi-patient" />
   <name value="Oridashi Patient" />
+  <title value="Oridashi Patient" />
   <status value="draft" />
   <date value="2017-08-12T00:52:34.866+10:00" />
   <description value="Patient in GP system" />
@@ -20,6 +21,11 @@
   <baseDefinition value="http://hl7.org.au/fhir/StructureDefinition/au-patient" />
   <derivation value="constraint" />
   <differential>
+    <element id="Patient">
+      <path value="Patient" />
+      <short value="Clinic Patient" />
+      <definition value="Oridashi patient record in GP system." />
+    </element>
     <element id="Patient.extension:indigenous-status">
       <path value="Patient.extension" />
       <sliceName value="indigenous-status" />
@@ -84,10 +90,6 @@
       <min value="1" />
       <fixedCode value="home" />
     </element>
-    <element id="Patient.telecom:homephone.rank">
-      <path value="Patient.telecom.rank" />
-      <max value="0" />
-    </element>
     <element id="Patient.telecom:homephone.period">
       <path value="Patient.telecom.period" />
       <max value="0" />
@@ -110,10 +112,6 @@
       <path value="Patient.telecom.use" />
       <min value="1" />
       <fixedCode value="work" />
-    </element>
-    <element id="Patient.telecom:workphone.rank">
-      <path value="Patient.telecom.rank" />
-      <max value="0" />
     </element>
     <element id="Patient.telecom:workphone.period">
       <path value="Patient.telecom.period" />
@@ -138,10 +136,6 @@
       <min value="1" />
       <fixedCode value="mobile" />
     </element>
-    <element id="Patient.telecom:mobilephone.rank">
-      <path value="Patient.telecom.rank" />
-      <max value="0" />
-    </element>
     <element id="Patient.telecom:mobilephone.period">
       <path value="Patient.telecom.period" />
       <max value="0" />
@@ -164,10 +158,6 @@
       <path value="Patient.telecom.use" />
       <min value="1" />
       <fixedCode value="home" />
-    </element>
-    <element id="Patient.telecom:email.rank">
-      <path value="Patient.telecom.rank" />
-      <max value="0" />
     </element>
     <element id="Patient.telecom:email.period">
       <path value="Patient.telecom.period" />
@@ -290,6 +280,8 @@
     </element>
     <element id="Patient.photo">
       <path value="Patient.photo" />
+      <short value="Image of the patient (MD only)" />
+      <definition value="Image of the patient. Supported by Medical Director only." />
       <max value="1" />
     </element>
     <element id="Patient.contact">
@@ -470,6 +462,10 @@
       <path value="Patient.generalPractitioner" />
       <min value="1" />
       <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://oridashi.com.au/fhir/StructureDefinition/oridashi-practitioner" />
+      </type>
     </element>
     <element id="Patient.managingOrganization">
       <path value="Patient.managingOrganization" />

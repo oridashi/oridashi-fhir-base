@@ -1,0 +1,2 @@
+Heart Rate Search Details
+		

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<defs>
+	<def Code="8310-5" System="http://loinc.org" Display="Body Temperature" units="Cel" stdunits="true"  dtype="Quantity" id="bodytemperature"/>
+	<def Code="8867-4" System="http://loinc.org" Display="Heart Rate" units="/min" stdunits="true" dtype="Quantity" id="heartrate"/>
+	<def Code="9279-1" System="http://loinc.org" Display="Respiration Rate" units="/min" stdunits="true" dtype="Quantity" id="respirationrate"/>
+	<def Code="1558-6" System="http://loinc.org" Display="BSL (fasting)" units="mg/dL" dtype="Quantity" id="bslfasting"/>
+	<def Code="14749-6" System="http://loinc.org" Display="BSL (random)" units="mmol/L" dtype="Quantity" id="bslrandom"/>
+	<def Code="8302-2" System="http://loinc.org" Display="Height" units="cm" stdunits="true" dtype="Quantity" id="height"/>
+	<def Code="29463-7" System="http://loinc.org" Display="Weight" units="kg" stdunits="true" dtype="Quantity" id="weight"/>
+	<def Code="39156-5" System="http://loinc.org" Display="Body Mass Index" units="kg/m^2"  stdunits="true" dtype="Quantity" id="bodymassindex"/>
+	<def Code="8280-0" System="http://loinc.org" Display="Waist Circumference" units="cm"  stdunits="true" dtype="Quantity" id="waistcircumference"/>
+	<def Code = "69975-1" System = "http://loinc.org" Display = "Peak Flow (Pre)" units="L/s"  stdunits="true" dtype="Quantity" id="peakflowpre"/>
+	<def Code = "20157-4" System = "http://loinc.org" Display = "FEV1 (Pre)" units="L"  stdunits="true" dtype="Quantity" id="fev1pre"/>
+	<def Code = "19876-2" System = "http://loinc.org" Display = "FVC (Pre)" units="L" dtype="Quantity" stdunits="true" id="fvcpre"/>
+	<def  Code = "69976-9" System = "http://loinc.org" Display = "Peak Flow (Post)" units="L/s"  stdunits="true" dtype="Quantity" id="peakflowpost"/>
+	<def  Code = "20155-8" System = "http://loinc.org" Display = "FEV1 (Post)"  units="L"  stdunits="true" dtype="Quantity" id="fev1post"/>
+	<def Code = "19875-4" System = "http://loinc.org" Display = "FVC (Post)"  units="L"  stdunits="true" dtype="Quantity" id="fvcpost"/>
+	<def Code="33914-3" System="http://loinc.org" Display="eGFR" units="mL/min"  stdunits="true" dtype="Quantity" id="egfr"/>
+	<def Code="35591-7" System="http://loinc.org" Display="Creatinine Clearance (Cockroft-Gault)" units="mL/min" stdunits="true" dtype="Quantity" id="creatinineclearance"/>
+	<def Code="59408-5" System="http://loinc.org" Display="Oxygen Saturation" units="%" dtype="Quantity"  stdunits="true" id="o2saturation"/>
+	<def Code="441829007" System="http://snomed.info/sct" Display="Cardiovascular Risk" units="%" dtype="Quantity" id="cardiovascularrisk"/>
+	<def Code="4548-4" System="http://loinc.org" Display="HBA1C" units="%" stdunits="true" dtype="Quantity" id="hba1c"/>
+	<def Code="59261-8" System="http://loinc.org" Display="HBA1C (SI)" units="mmol/mol" dtype="Quantity" id="hba1csi"/>
+	<def Code="14647-2" System="http://loinc.org" Display="Total Cholesterol" units="" dtype="Quantity" id="totalcholesterol"/>
+	<def Code="14646-4" System="http://loinc.org" Display="HDL" units="" dtype="Quantity" id="hdl"/>
+	<def Code="22748-8" System="http://loinc.org" Display="LDL" units="" dtype="Quantity" id="ldl"/>
+	<def Code="14927-8" System="http://loinc.org" Display="Triglycerides" units="" dtype="Quantity" id="triglycerides"/>
+	<def Code="14682-9" System="http://loinc.org" Display="Creatinine" units="" dtype="Quantity" id="creatinine"/>
+	<def Code="49023-5" System="http://loinc.org" Display="Microalbumin Excretion Rate" units="mcg/min" dtype="Quantity" id="microalbuminexcretionrate"/>
+	<def Code="30000-4" System="http://loinc.org" Display="ACR" units="mg/mmol" dtype="Quantity" id="acr"/>
+	<def Code="14956-7" System="http://loinc.org" Display="Microalbumin Excretion Rate (24hr)" units="g/day" dtype="Quantity" id="microalbuminexcretionrate24h"/>
+	<def Code="14957-5" System="http://loinc.org" Display="Microalbumin" units="mg/L" dtype="Quantity" id="microalbumin"/>
+	<def Code="6301-6" System="http://loinc.org" Display="INR" units="" dtype="Quantity" id="inr"/>
+	<def Code = "72166-2" System = "http://loinc.org" Display = "Smoking Status" units="" dtype="CodeableConcept" ValueSet="http://oridashi.com.au/fhir/ValueSet/oridashi-smoking-status" id="smokingstatus"/>
+	<def Code = "882-1" System = "http://loinc.org" Display = "ABO+RH Group"  units="" dtype="CodeableConcept" ValueSet="http://oridashi.com.au/fhir/ValueSet/oridashi-blood-group" id="bloodgroup"/>
+	<def Code = "160573003" System = "http://snomed.info/sct" Display = "Alcohol consumption" units="" dtype="CodeableConcept" ValueSet="http://oridashi.com.au/fhir/ValueSet/oridashi-alcohol-consumption" id="acoholconsumption"/>
+	<def Code = "163035008" System = "http://snomed.info/sct" Display = "Blood Pressure (Sitting)" id="bloodpressuresitting">
+		<alt Code = "55284-4" System = "http://loinc.org" Display = "Blood Pressure" />
+		<def  Code = "8459-0" System = "http://loinc.org" Display = "Systolic (Sitting)" units="mmHg" dtype="Quantity">
+			<alt  Code = "8480-6" System = "http://loinc.org" Display = "Systolic" />
+		</def>
+		<def   Code = "8453-3" System = "http://loinc.org" Display = "Diastolic (Sitting)" units="mmHg" dtype="Quantity">
+			<alt  Code = "8462-4" System = "http://loinc.org" Display = "Diastolic"/>
+		</def>
+	</def>
+	<def Code = "163033001" System = "http://snomed.info/sct" Display = "Blood Pressure (Lying)" id="bloodpressurelying">
+		<alt Code = "55284-4" System = "http://loinc.org" Display = "Blood Pressure" />
+		<def  Code = "8461-6" System = "http://loinc.org" Display = "Systolic (Lying)" units="mmHg" dtype="Quantity">
+			<alt  Code = "8480-6" System = "http://loinc.org" Display = "Systolic" />
+		</def>
+		<def   Code = "8455-8" System = "http://loinc.org" Display = "Diastolic (Lying)" units="mmHg" dtype="Quantity">
+			<alt  Code = "8462-4" System = "http://loinc.org" Display = "Diastolic"/>
+		</def>
+	</def>
+	<def Code = "163034007" System = "http://snomed.info/sct" Display = "Blood Pressure (Standing)" id="bloodpressurestanding">
+		<alt Code = "55284-4" System = "http://loinc.org" Display = "Blood Pressure" />
+		<def  Code = "8460-8" System = "http://loinc.org" Display = "Systolic (Standing)" units="mmHg" dtype="Quantity">
+			<alt  Code = "8480-6" System = "http://loinc.org" Display = "Systolic" />
+		</def>
+		<def   Code = "8454-1" System = "http://loinc.org" Display = "Diastolic (Standing)" units="mmHg" dtype="Quantity">
+			<alt  Code = "8462-4" System = "http://loinc.org" Display = "Diastolic"/>
+		</def>
+	</def>
+</defs>

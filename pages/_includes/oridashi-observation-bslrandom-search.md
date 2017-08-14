@@ -1,0 +1,2 @@
+BSL (random) Search Details
+		

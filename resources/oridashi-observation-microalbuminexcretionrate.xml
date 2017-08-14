@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions">
+	<id value="oridashi-observation-microalbuminexcretionrate"/>
+	<meta>
+		<lastUpdated value="2017-08-13T12:26:43.976+10:00"/>
+	</meta>
+	<text>
+		<status value="generated"/>
+		<div xmlns="http://www.w3.org/1999/xhtml">
+			<p>Microalbumin Excretion Rate</p>
+		</div>
+	</text>
+	<url value="http://oridashi.com.au/fhir/StructureDefinition/oridashi-observation-microalbuminexcretionrate"/>
+	<name value="Oridashi Observation Microalbumin Excretion Rate"/>
+	<title value="Oridashi Observation Microalbumin Excretion Rate"/>
+	<status value="draft"/>
+	<date value="2017-08-13T12:18:24.372+10:00"/>
+	<fhirVersion value="3.0.1"/>
+	<kind value="resource"/>
+	<abstract value="false"/>
+	<type value="Observation"/>
+	<baseDefinition value="http://oridashi.com.au/fhir/StructureDefinition/oridashi-observation"/>
+	<derivation value="constraint"/>
+	<differential>
+		<element id="Observation">
+			<path value="Observation"/>
+		</element>
+		<element id="Observation.code">
+			<path value="Observation.code"/>
+		</element>
+		<element id="Observation.code.coding">
+			<path value="Observation.code.coding"/>
+			<min value="1"/>
+			<max value="1"/>
+			<fixedCoding>
+				<system value="http://loinc.org"/>
+				<code value="49023-5"/>
+				<display value="Microalbumin Excretion Rate"/>
+			</fixedCoding>
+		</element>
+		<element id="Observation.code.text">
+			<path value="Observation.code.text"/>
+			<min value="1"/>
+			<fixedString value="Microalbumin Excretion Rate"/>
+		</element>
+		<element id="Observation.value[x]:valueQuantity">
+			<path value="Observation.valueQuantity"/>
+			<sliceName value="valueQuantity"/>
+			<min value="1"/>
+			<type>
+				<code value="Quantity"/>
+			</type>
+		</element>
+		<element id="Observation.value[x]:valueQuantity.unit">
+			<path value="Observation.valueQuantity.unit"/>
+			<min value="1"/>
+			<fixedString value="mcg/min"/>
+		</element>
+	</differential>
+</StructureDefinition>

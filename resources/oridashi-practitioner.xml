@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="oridashi-practitioner" />
   <meta>
-    <lastUpdated value="2017-08-12T00:57:24.418+10:00" />
+    <lastUpdated value="2017-08-12T23:21:27.666+10:00" />
   </meta>
   <text>
     <status value="generated" /><div xmlns="http://www.w3.org/1999/xhtml">
@@ -10,7 +10,7 @@
 </div></text>
   <url value="http://oridashi.com.au/fhir/StructureDefinition/oridashi-practitioner" />
   <name value="Oridashi Practitioner" />
-  <title value="Australian Practitioner Directory Entry" />
+  <title value="Oridashi Practitioner" />
   <status value="draft" />
   <date value="2017-05-05T16:52:22.3595388+10:00" />
   <description value="Individual practitioner person" />
@@ -21,22 +21,24 @@
   <baseDefinition value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner" />
   <derivation value="constraint" />
   <differential>
+    <element id="Practitioner">
+      <path value="Practitioner" />
+      <short value="Individual Practitioner Person" />
+      <definition value="GP system practitioner person, includes other healthcare service staff." />
+    </element>
     <element id="Practitioner.identifier.hpii">
       <path value="Practitioner.identifier" />
       <sliceName value="HPI-I" />
       <definition value="National identifier for the individual provider" />
-      <mustSupport value="true" />
     </element>
     <element id="Practitioner.active">
       <path value="Practitioner.active" />
       <min value="1" />
-      <mustSupport value="true" />
     </element>
     <element id="Practitioner.name">
       <path value="Practitioner.name" />
       <min value="1" />
       <max value="1" />
-      <mustSupport value="true" />
     </element>
     <element id="Practitioner.name.use">
       <path value="Practitioner.name.use" />

@@ -54,7 +54,7 @@
 	}
   },
   "tool": "jekyll",
-  "canonicalBase": "http://hl7.org.au/fhir",
+  "canonicalBase": "http://oridashi.com.au/fhir",
   "paths": {
     "temp": "temp",
     "resources": [ "resources", "examples" ],
@@ -64,5 +64,39 @@
     "qa": "qa",
     "specification": "http://build.fhir.org"
   },
-  "resources": { }
+  "resources": { 
+    "StructureDefinition/oridashi-location": {
+	  "base": "StructureDefinition-oridashi-location.html"
+	},
+    "StructureDefinition/oridashi-practitioner": {
+	  "base": "StructureDefinition-oridashi-practitioner.html"
+	},
+    "StructureDefinition/oridashi-patient": {
+	  "base": "StructureDefinition-oridashi-patient.html"
+	},
+    "StructureDefinition/oridashi-practitionerrole": {
+	  "base": "StructureDefinition-oridashi-practitionerrole.html"
+	},
+    "StructureDefinition/oridashi-allergyintolerance": {
+	  "base": "StructureDefinition-oridashi-allergyintolerance.html"
+	},
+    "StructureDefinition/oridashi-condition": {
+	  "base": "StructureDefinition-oridashi-condition.html"
+	},
+    "StructureDefinition/oridashi-procedure": {
+	  "base": "StructureDefinition-oridashi-procedure.html"
+	},
+    "StructureDefinition/oridashi-observation": {
+	  "base": "StructureDefinition-oridashi-observation.html"
+	},
+    "StructureDefinition/oridashi-encounter": {
+	  "base": "StructureDefinition-oridashi-encounter.html"
+	},
+	"StructureDefinition/oridashi-immunization": {
+	  "base": "StructureDefinition-oridashi-immunization.html"
+	},
+	"StructureDefinition/oridashi-organisation": {
+	  "base": "StructureDefinition-oridashi-organisation.html"
+	}
+  }
 }

@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="oridashi-allergyintolerance" />
   <meta>
-    <lastUpdated value="2017-08-12T01:50:45.315+10:00" />
+    <lastUpdated value="2017-08-12T23:21:49.979+10:00" />
   </meta>
   <text>
     <status value="generated" /><div xmlns="http://www.w3.org/1999/xhtml">
@@ -10,6 +10,7 @@
 </div></text>
   <url value="http://oridashi.com.au/fhir/StructureDefinition/oridashi-allergyintolerance" />
   <name value="Oridashi Allergy Intolerance" />
+  <title value="Oridashi Allergy Intolerance" />
   <status value="draft" />
   <date value="2017-08-12T01:39:22.041+10:00" />
   <description value="Allergies and intolerances" />
@@ -20,6 +21,11 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/AllergyIntolerance" />
   <derivation value="constraint" />
   <differential>
+    <element id="AllergyIntolerance">
+      <path value="AllergyIntolerance" />
+      <short value="Allergy or Intolerance" />
+      <definition value="GP clinical system allergy/intolerance entry." />
+    </element>
     <element id="AllergyIntolerance.identifier">
       <path value="AllergyIntolerance.identifier" />
       <max value="0" />

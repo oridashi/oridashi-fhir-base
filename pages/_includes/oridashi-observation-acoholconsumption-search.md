@@ -1,0 +1,2 @@
+Alcohol consumption Search Details
+		

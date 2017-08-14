@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="oridashi-practitionerrole" />
   <meta>
-    <lastUpdated value="2017-08-12T01:05:16.675+10:00" />
+    <lastUpdated value="2017-08-12T23:21:24.93+10:00" />
   </meta>
   <text>
     <status value="generated" /><div xmlns="http://www.w3.org/1999/xhtml">
@@ -10,6 +10,7 @@
 </div></text>
   <url value="http://oridashi.com.au/fhir/StructureDefinition/oridashi-practitionerrole" />
   <name value="Oridashi Provider" />
+  <title value="Oridashi Provider" />
   <status value="draft" />
   <date value="2017-06-09T16:36:38.9010786+10:00" />
   <description value="Provider of healthcare services " />
@@ -20,10 +21,14 @@
   <baseDefinition value="http://hl7.org.au/fhir/StructureDefinition/au-practitionerrole" />
   <derivation value="constraint" />
   <differential>
+    <element id="PractitionerRole">
+      <path value="PractitionerRole" />
+      <short value="Provider Practitioner in a Role" />
+      <definition value="Provider at a location acting in a role." />
+    </element>
     <element id="PractitionerRole.identifier.provider-number">
       <path value="PractitionerRole.identifier" />
       <sliceName value="provider-number" />
-      <mustSupport value="true" />
     </element>
     <element id="PractitionerRole.identifier:provider-number.use">
       <path value="PractitionerRole.identifier.use" />
@@ -55,7 +60,6 @@
         <code value="Reference" />
         <targetProfile value="http://oridashi.com.au/fhir/StructureDefinition/oridashi-practitioner" />
       </type>
-      <mustSupport value="true" />
     </element>
     <element id="PractitionerRole.organization">
       <path value="PractitionerRole.organization" />
@@ -66,13 +70,11 @@
         <code value="Reference" />
         <targetProfile value="http://oridashi.com.au/fhir/StructureDefinition/oridashi-organisation" />
       </type>
-      <mustSupport value="true" />
     </element>
     <element id="PractitionerRole.specialty">
       <path value="PractitionerRole.specialty" />
       <short value="Specific specialties of the practitioner" />
       <definition value="Specialties define the advertised capabilities of the practitioner in this role." />
-      <mustSupport value="true" />
     </element>
     <element id="PractitionerRole.specialty:specialty-role">
       <path value="PractitionerRole.specialty" />
@@ -88,7 +90,7 @@
         <code value="Reference" />
         <targetProfile value="http://oridashi.com.au/fhir/StructureDefinition/oridashi-location" />
       </type>
-      <mustSupport value="true" />
+      <mustSupport value="false" />
     </element>
     <element id="PractitionerRole.healthcareService">
       <path value="PractitionerRole.healthcareService" />
@@ -99,7 +101,6 @@
       <short value="Contact details for the practitioner in this role." />
       <definition value="Details for contacting the practitioner in this role." />
       <max value="0" />
-      <mustSupport value="true" />
     </element>
     <element id="PractitionerRole.availableTime">
       <path value="PractitionerRole.availableTime" />
@@ -126,7 +127,6 @@
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Endpoint" />
       </type>
-      <mustSupport value="true" />
     </element>
   </differential>
 </StructureDefinition>
