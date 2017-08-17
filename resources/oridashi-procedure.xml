@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="oridashi-procedure" />
+  <meta>
+    <lastUpdated value="2017-08-16T19:05:48.286+10:00" />
+  </meta>
+  <url value="http://oridashi.com.au/fhir/StructureDefinition/oridashi-procedure" />
+  <name value="Oridashi Procedure" />
+  <title value="Oridashi Procedure" />
+  <status value="draft" />
+  <date value="2017-08-16T19:01:20.03+10:00" />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Procedure" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Procedure" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Procedure.identifier">
+      <path value="Procedure.identifier" />
+      <max value="0" />
+    </element>
+    <element id="Procedure.definition">
+      <path value="Procedure.definition" />
+      <max value="0" />
+    </element>
+    <element id="Procedure.basedOn">
+      <path value="Procedure.basedOn" />
+      <max value="0" />
+    </element>
+    <element id="Procedure.partOf">
+      <path value="Procedure.partOf" />
+      <max value="0" />
+    </element>
+    <element id="Procedure.notDone">
+      <path value="Procedure.notDone" />
+      <max value="0" />
+    </element>
+    <element id="Procedure.notDoneReason">
+      <path value="Procedure.notDoneReason" />
+      <max value="0" />
+    </element>
+    <element id="Procedure.category">
+      <path value="Procedure.category" />
+      <max value="0" />
+    </element>
+    <element id="Procedure.subject">
+      <path value="Procedure.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+      </type>
+    </element>
+    <element id="Procedure.context">
+      <path value="Procedure.context" />
+      <max value="0" />
+    </element>
+    <element id="Procedure.performed[x]:performedDateTime">
+      <path value="Procedure.performedDateTime" />
+      <sliceName value="performedDateTime" />
+      <type>
+        <code value="dateTime" />
+      </type>
+    </element>
+    <element id="Procedure.performer">
+      <path value="Procedure.performer" />
+      <max value="0" />
+    </element>
+    <element id="Procedure.location">
+      <path value="Procedure.location" />
+      <max value="0" />
+    </element>
+    <element id="Procedure.reasonCode">
+      <path value="Procedure.reasonCode" />
+      <max value="0" />
+    </element>
+    <element id="Procedure.reasonReference">
+      <path value="Procedure.reasonReference" />
+      <max value="0" />
+    </element>
+    <element id="Procedure.bodySite">
+      <path value="Procedure.bodySite" />
+      <max value="0" />
+    </element>
+    <element id="Procedure.outcome">
+      <path value="Procedure.outcome" />
+      <max value="0" />
+    </element>
+    <element id="Procedure.report">
+      <path value="Procedure.report" />
+      <max value="0" />
+    </element>
+    <element id="Procedure.complication">
+      <path value="Procedure.complication" />
+      <max value="0" />
+    </element>
+    <element id="Procedure.complicationDetail">
+      <path value="Procedure.complicationDetail" />
+      <max value="0" />
+    </element>
+    <element id="Procedure.followUp">
+      <path value="Procedure.followUp" />
+      <max value="0" />
+    </element>
+    <element id="Procedure.focalDevice">
+      <path value="Procedure.focalDevice" />
+      <max value="0" />
+    </element>
+    <element id="Procedure.usedReference">
+      <path value="Procedure.usedReference" />
+      <max value="0" />
+    </element>
+    <element id="Procedure.usedCode">
+      <path value="Procedure.usedCode" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

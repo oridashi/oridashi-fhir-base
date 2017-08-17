@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="oridashi-procedurerequest" />
+  <meta>
+    <lastUpdated value="2017-08-16T20:12:59.737+10:00" />
+  </meta>
+  <url value="http://oridashi.com.au/fhir/StructureDefinition/oridashi-procedurerequest" />
+  <name value="Oridashi Procedure Request" />
+  <title value="Oridashi Procedure Request" />
+  <status value="draft" />
+  <date value="2017-08-16T20:07:19.238+10:00" />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="ProcedureRequest" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/ProcedureRequest" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="ProcedureRequest">
+      <path value="ProcedureRequest" />
+      <short value="Procedure Request" />
+      <definition value="Record of pathology or imaging requests made.  These may be outstanding or completed requested." />
+    </element>
+    <element id="ProcedureRequest.identifier">
+      <path value="ProcedureRequest.identifier" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

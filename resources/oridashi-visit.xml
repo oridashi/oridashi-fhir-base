@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-08-13T23:24:09.293+10:00" />
+    <lastUpdated value="2017-08-16T17:58:02.677+10:00" />
   </meta>
   <url value="http://oridashi.com.au/fhir/StructureDefinition/oridashi-encounter" />
   <name value="Oridashi Visit" />
@@ -23,6 +23,24 @@
     </element>
     <element id="Encounter.identifier">
       <path value="Encounter.identifier" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.statusHistory">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="StatusHistory" />
+      </extension>
+      <path value="Encounter.statusHistory" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.classHistory">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="ClassHistory" />
+      </extension>
+      <path value="Encounter.classHistory" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.priority">
+      <path value="Encounter.priority" />
       <max value="0" />
     </element>
     <element id="Encounter.subject">
@@ -49,12 +67,23 @@
       <path value="Encounter.period" />
       <max value="0" />
     </element>
+    <element id="Encounter.diagnosis">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Diagnosis" />
+      </extension>
+      <path value="Encounter.diagnosis" />
+      <max value="0" />
+    </element>
     <element id="Encounter.account">
       <path value="Encounter.account" />
       <max value="0" />
     </element>
     <element id="Encounter.hospitalization">
       <path value="Encounter.hospitalization" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.partOf">
+      <path value="Encounter.partOf" />
       <max value="0" />
     </element>
   </differential>

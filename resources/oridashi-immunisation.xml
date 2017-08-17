@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-08-13T23:22:21.575+10:00" />
+    <lastUpdated value="2017-08-16T17:36:00.68+10:00" />
   </meta>
   <url value="http://oridashi.com.au/fhir/StructureDefinition/oridashi-immunisation" />
   <name value="Oridashi Immunisation" />
@@ -23,6 +23,39 @@
     </element>
     <element id="Immunization.identifier">
       <path value="Immunization.identifier" />
+      <max value="0" />
+    </element>
+    <element id="Immunization.reportOrigin">
+      <path value="Immunization.reportOrigin" />
+      <max value="0" />
+    </element>
+    <element id="Immunization.location">
+      <path value="Immunization.location" />
+      <max value="0" />
+    </element>
+    <element id="Immunization.manufacturer">
+      <path value="Immunization.manufacturer" />
+      <max value="0" />
+    </element>
+    <element id="Immunization.expirationDate">
+      <path value="Immunization.expirationDate" />
+      <max value="0" />
+    </element>
+    <element id="Immunization.doseQuantity:SimpleQuantity">
+      <path value="Immunization.doseQuantity" />
+      <sliceName value="SimpleQuantity" />
+      <max value="0" />
+    </element>
+    <element id="Immunization.explanation">
+      <path value="Immunization.explanation" />
+      <max value="0" />
+    </element>
+    <element id="Immunization.reaction">
+      <path value="Immunization.reaction" />
+      <max value="0" />
+    </element>
+    <element id="Immunization.vaccinationProtocol">
+      <path value="Immunization.vaccinationProtocol" />
       <max value="0" />
     </element>
   </differential>

@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="oridashi-medicationstatement" />
+  <meta>
+    <lastUpdated value="2017-08-16T19:44:01.805+10:00" />
+  </meta>
+  <url value="http://oridashi.com.au/fhir/StructureDefinition/oridashi-medicationstatement" />
+  <name value="Oridashi Current Medication Statement" />
+  <title value="Oridashi Current Medication Statement" />
+  <status value="draft" />
+  <date value="2017-08-16T18:05:57.144+10:00" />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="MedicationStatement" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/MedicationStatement" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="MedicationStatement">
+      <path value="MedicationStatement" />
+      <short value="Record of current Medication" />
+      <definition value="Record of current medication for a patient as maintained in the current medications list." />
+    </element>
+    <element id="MedicationStatement.identifier">
+      <path value="MedicationStatement.identifier" />
+      <max value="0" />
+    </element>
+    <element id="MedicationStatement.basedOn">
+      <path value="MedicationStatement.basedOn" />
+      <max value="0" />
+    </element>
+    <element id="MedicationStatement.partOf">
+      <path value="MedicationStatement.partOf" />
+      <max value="0" />
+    </element>
+    <element id="MedicationStatement.category">
+      <path value="MedicationStatement.category" />
+      <max value="0" />
+    </element>
+    <element id="MedicationStatement.medication[x]">
+      <path value="MedicationStatement.medication[x]" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Medication" />
+        <aggregation value="contained" />
+      </type>
+    </element>
+    <element id="MedicationStatement.informationSource">
+      <path value="MedicationStatement.informationSource" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+      </type>
+    </element>
+    <element id="MedicationStatement.derivedFrom">
+      <path value="MedicationStatement.derivedFrom" />
+      <max value="0" />
+    </element>
+    <element id="MedicationStatement.reasonNotTaken">
+      <path value="MedicationStatement.reasonNotTaken" />
+      <max value="0" />
+    </element>
+    <element id="MedicationStatement.reasonReference">
+      <path value="MedicationStatement.reasonReference" />
+      <max value="0" />
+    </element>
+    <element id="MedicationStatement.dosage.sequence">
+      <path value="MedicationStatement.dosage.sequence" />
+      <max value="0" />
+    </element>
+    <element id="MedicationStatement.dosage.additionalInstruction">
+      <path value="MedicationStatement.dosage.additionalInstruction" />
+      <max value="0" />
+    </element>
+    <element id="MedicationStatement.dosage.patientInstruction">
+      <path value="MedicationStatement.dosage.patientInstruction" />
+      <max value="0" />
+    </element>
+    <element id="MedicationStatement.dosage.asNeeded[x]:asNeededBoolean">
+      <path value="MedicationStatement.dosage.asNeededBoolean" />
+      <sliceName value="asNeededBoolean" />
+      <type>
+        <code value="boolean" />
+      </type>
+    </element>
+    <element id="MedicationStatement.dosage.site">
+      <path value="MedicationStatement.dosage.site" />
+      <max value="0" />
+    </element>
+    <element id="MedicationStatement.dosage.method">
+      <path value="MedicationStatement.dosage.method" />
+      <max value="0" />
+    </element>
+    <element id="MedicationStatement.dosage.dose[x]">
+      <path value="MedicationStatement.dosage.dose[x]" />
+      <max value="0" />
+    </element>
+    <element id="MedicationStatement.dosage.maxDosePerPeriod">
+      <path value="MedicationStatement.dosage.maxDosePerPeriod" />
+      <max value="0" />
+    </element>
+    <element id="MedicationStatement.dosage.maxDosePerAdministration:SimpleQuantity">
+      <path value="MedicationStatement.dosage.maxDosePerAdministration" />
+      <sliceName value="SimpleQuantity" />
+      <max value="0" />
+    </element>
+    <element id="MedicationStatement.dosage.maxDosePerLifetime:SimpleQuantity">
+      <path value="MedicationStatement.dosage.maxDosePerLifetime" />
+      <sliceName value="SimpleQuantity" />
+      <max value="0" />
+    </element>
+    <element id="MedicationStatement.dosage.rate[x]">
+      <path value="MedicationStatement.dosage.rate[x]" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

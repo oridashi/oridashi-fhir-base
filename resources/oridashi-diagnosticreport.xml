@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="oridashi-diagnosticreport" />
+  <meta>
+    <lastUpdated value="2017-08-16T20:06:51.006+10:00" />
+  </meta>
+  <url value="http://oridashi.com.au/fhir/StructureDefinition/oridashi-diagnosticreport" />
+  <name value="Oridashi Investigation Report" />
+  <title value="Oridashi Investigation Report" />
+  <status value="draft" />
+  <date value="2017-08-16T19:45:02.994+10:00" />
+  <description value="Pathology and imaging investigation reports." />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="DiagnosticReport" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/DiagnosticReport" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="DiagnosticReport">
+      <path value="DiagnosticReport" />
+      <short value="Pathology or Imaging Report" />
+      <definition value="Investigation reports from pathology or imaging requests." />
+    </element>
+    <element id="DiagnosticReport.identifier">
+      <path value="DiagnosticReport.identifier" />
+      <max value="0" />
+    </element>
+    <element id="DiagnosticReport.basedOn">
+      <path value="DiagnosticReport.basedOn" />
+      <max value="0" />
+    </element>
+    <element id="DiagnosticReport.category">
+      <path value="DiagnosticReport.category" />
+      <max value="0" />
+    </element>
+    <element id="DiagnosticReport.subject">
+      <path value="DiagnosticReport.subject" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+      </type>
+    </element>
+    <element id="DiagnosticReport.context">
+      <path value="DiagnosticReport.context" />
+      <max value="0" />
+    </element>
+    <element id="DiagnosticReport.effective[x]:effectiveDateTime">
+      <path value="DiagnosticReport.effectiveDateTime" />
+      <sliceName value="effectiveDateTime" />
+      <min value="1" />
+      <type>
+        <code value="dateTime" />
+      </type>
+    </element>
+    <element id="DiagnosticReport.issued">
+      <path value="DiagnosticReport.issued" />
+      <min value="1" />
+    </element>
+    <element id="DiagnosticReport.performer.role">
+      <path value="DiagnosticReport.performer.role" />
+      <min value="1" />
+    </element>
+    <element id="DiagnosticReport.performer.actor">
+      <path value="DiagnosticReport.performer.actor" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+        <aggregation value="contained" />
+      </type>
+    </element>
+    <element id="DiagnosticReport.performer.actor.reference">
+      <path value="DiagnosticReport.performer.actor.reference" />
+      <min value="1" />
+    </element>
+    <element id="DiagnosticReport.performer.actor.identifier">
+      <path value="DiagnosticReport.performer.actor.identifier" />
+      <max value="0" />
+    </element>
+    <element id="DiagnosticReport.specimen">
+      <path value="DiagnosticReport.specimen" />
+      <max value="0" />
+    </element>
+    <element id="DiagnosticReport.imagingStudy">
+      <path value="DiagnosticReport.imagingStudy" />
+      <max value="0" />
+    </element>
+    <element id="DiagnosticReport.image">
+      <path value="DiagnosticReport.image" />
+      <max value="0" />
+    </element>
+    <element id="DiagnosticReport.codedDiagnosis">
+      <path value="DiagnosticReport.codedDiagnosis" />
+      <max value="0" />
+    </element>
+    <element id="DiagnosticReport.presentedForm">
+      <path value="DiagnosticReport.presentedForm" />
+      <max value="1" />
+    </element>
+    <element id="DiagnosticReport.presentedForm.contentType">
+      <path value="DiagnosticReport.presentedForm.contentType" />
+      <min value="1" />
+    </element>
+    <element id="DiagnosticReport.presentedForm.language">
+      <path value="DiagnosticReport.presentedForm.language" />
+      <max value="0" />
+    </element>
+    <element id="DiagnosticReport.presentedForm.data">
+      <path value="DiagnosticReport.presentedForm.data" />
+      <min value="1" />
+    </element>
+    <element id="DiagnosticReport.presentedForm.url">
+      <path value="DiagnosticReport.presentedForm.url" />
+      <max value="0" />
+    </element>
+    <element id="DiagnosticReport.presentedForm.size">
+      <path value="DiagnosticReport.presentedForm.size" />
+      <max value="0" />
+    </element>
+    <element id="DiagnosticReport.presentedForm.hash">
+      <path value="DiagnosticReport.presentedForm.hash" />
+      <max value="0" />
+    </element>
+    <element id="DiagnosticReport.presentedForm.title">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="DiagnosticReport.presentedForm.title" />
+      <max value="0" />
+    </element>
+    <element id="DiagnosticReport.presentedForm.creation">
+      <path value="DiagnosticReport.presentedForm.creation" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>
