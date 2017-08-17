@@ -28,7 +28,40 @@ Observation profile for basic observation/result for <xsl:value-of select="@Disp
 			</xsl:if> (as Quantity)
 		</xsl:result-document>
 		<xsl:result-document href="gen-pages/oridashi-observation-{$fname}-search.md" method="text">
-			<xsl:value-of select="@Display"/> Search Details
+Oridashi Observation <xsl:value-of select="@Display"/> Search
+
+-----------
+**Read: Observation by Resource Identifier **
+
+`GET [base]/Observation/[id]`
+
+*Example:* 
+`GET [base]/1-443`
+
+*Implementation Notes:*  [(how to search by token)]
+
+-----------
+**Search: Observation by Code **
+
+`GET [base]/Observation?code=[code]|[system]
+
+*Example:* 
+`GET [base]/PractitionerRole?code=<xsl:attribute name="value"><xsl:value-of select="@Code"/></xsl:attribute>|<xsl:attribute name="value"><xsl:value-of select="@System"/></xsl:attribute>
+
+*Support* Mandatory to support search by Practitioner family and or given name.
+
+*Implementation Notes:*  [(how to search by string)]
+
+* Chained search (via Practitioner) based on text name.
+* Can _include details of managing organisation, endpoints and location by adding 
+`&amp;_include=PractitionerRole:organization&amp;_include=PractitionerRole:endpoint&amp;_include=PractitionerRole:location`	
+
+-----------
+ [(how to search by reference)]: http://hl7.org/fhir/search.html#reference
+ [(how to search by token)]: http://hl7.org/fhir/search.html#token
+ [(how to search by date)]: http://hl7.org/fhir/search.html#date
+ [(how to search by string)]: http://hl7.org/fhir/search.html#string
+			
 		</xsl:result-document>
 		<xsl:result-document href="gen-resources/oridashi-observation-{$fname}.xml" method="xml">
 			<StructureDefinition xmlns="http://hl7.org/fhir">
