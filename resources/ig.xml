@@ -48,6 +48,12 @@
 				<reference value="StructureDefinition/oridashi-condition"/>
 			</sourceReference>
 		</resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/oridashi-procedure"/>
+      </sourceReference>
+    </resource>
 		<resource>
 			<example value="false"/>
 			<sourceReference>
@@ -72,6 +78,30 @@
 				<reference value="StructureDefinition/oridashi-immunisation"/>
 			</sourceReference>
 		</resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/oridashi-medicationstatement"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/oridashi-medicationrequest"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/oridashi-procedurerequest"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/oridashi-diagnosticreport"/>
+      </sourceReference>
+    </resource>
 		<resource>
 			<example value="false"/>
 			<sourceReference>
