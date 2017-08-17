@@ -67,6 +67,10 @@
       <path value="MedicationStatement.reasonReference" />
       <max value="0" />
     </element>
+    <element id="MedicationStatement.dosage">
+      <path value="MedicationStatement.dosage" />
+      <max value="0" />
+    </element>
     <element id="MedicationStatement.dosage.sequence">
       <path value="MedicationStatement.dosage.sequence" />
       <max value="0" />
