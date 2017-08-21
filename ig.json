@@ -9,7 +9,7 @@
     }
   ], 
   "spreadsheets": [],
-  "special-urls": [],
+  "special-urls": [ "http://loinc.org" ],
   "extraTemplates": [ "mappings" ],
   "defaults": {
     "ConceptMap": { "template-base": "cm.html" },

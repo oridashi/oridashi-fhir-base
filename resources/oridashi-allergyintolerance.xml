@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="oridashi-allergyintolerance" />
   <meta>
@@ -37,7 +37,7 @@
     </element>
     <element id="AllergyIntolerance.verificationStatus">
       <path value="AllergyIntolerance.verificationStatus" />
-      <fixedCode value="confirmed " />
+      <fixedCode value="confirmed" />
     </element>
     <element id="AllergyIntolerance.category">
       <path value="AllergyIntolerance.category" />

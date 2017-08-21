@@ -1,1 +1,1 @@
-Oridashi AllergyIntolerance Search
+Oridashi Allergy Intolerance Search
