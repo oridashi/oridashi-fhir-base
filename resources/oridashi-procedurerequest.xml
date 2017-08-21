@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="oridashi-procedurerequest" />
   <meta>
-    <lastUpdated value="2017-08-16T20:12:59.737+10:00" />
+    <lastUpdated value="2017-08-20T20:29:56.215+10:00" />
   </meta>
   <url value="http://oridashi.com.au/fhir/StructureDefinition/oridashi-procedurerequest" />
   <name value="Oridashi Procedure Request" />
@@ -23,6 +23,96 @@
     </element>
     <element id="ProcedureRequest.identifier">
       <path value="ProcedureRequest.identifier" />
+      <max value="0" />
+    </element>
+    <element id="ProcedureRequest.definition">
+      <path value="ProcedureRequest.definition" />
+      <max value="0" />
+    </element>
+    <element id="ProcedureRequest.basedOn">
+      <path value="ProcedureRequest.basedOn" />
+      <max value="0" />
+    </element>
+    <element id="ProcedureRequest.replaces">
+      <path value="ProcedureRequest.replaces" />
+      <max value="0" />
+    </element>
+    <element id="ProcedureRequest.requisition">
+      <path value="ProcedureRequest.requisition" />
+      <max value="0" />
+    </element>
+    <element id="ProcedureRequest.priority">
+      <path value="ProcedureRequest.priority" />
+      <max value="0" />
+    </element>
+    <element id="ProcedureRequest.doNotPerform">
+      <path value="ProcedureRequest.doNotPerform" />
+      <max value="0" />
+    </element>
+    <element id="ProcedureRequest.category">
+      <path value="ProcedureRequest.category" />
+      <max value="0" />
+    </element>
+    <element id="ProcedureRequest.subject">
+      <path value="ProcedureRequest.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+      </type>
+    </element>
+    <element id="ProcedureRequest.context">
+      <path value="ProcedureRequest.context" />
+      <max value="0" />
+    </element>
+    <element id="ProcedureRequest.occurrence[x]:occurrenceDateTime">
+      <path value="ProcedureRequest.occurrenceDateTime" />
+      <sliceName value="occurrenceDateTime" />
+      <min value="1" />
+      <type>
+        <code value="dateTime" />
+      </type>
+    </element>
+    <element id="ProcedureRequest.asNeeded[x]">
+      <path value="ProcedureRequest.asNeeded[x]" />
+      <max value="0" />
+    </element>
+    <element id="ProcedureRequest.requester">
+      <path value="ProcedureRequest.requester" />
+      <min value="1" />
+    </element>
+    <element id="ProcedureRequest.requester.agent">
+      <path value="ProcedureRequest.requester.agent" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+      </type>
+    </element>
+    <element id="ProcedureRequest.performerType">
+      <path value="ProcedureRequest.performerType" />
+      <max value="0" />
+    </element>
+    <element id="ProcedureRequest.performer">
+      <path value="ProcedureRequest.performer" />
+      <max value="0" />
+    </element>
+    <element id="ProcedureRequest.reasonCode">
+      <path value="ProcedureRequest.reasonCode" />
+      <max value="0" />
+    </element>
+    <element id="ProcedureRequest.reasonReference">
+      <path value="ProcedureRequest.reasonReference" />
+      <max value="0" />
+    </element>
+    <element id="ProcedureRequest.supportingInfo">
+      <path value="ProcedureRequest.supportingInfo" />
+      <max value="0" />
+    </element>
+    <element id="ProcedureRequest.specimen">
+      <path value="ProcedureRequest.specimen" />
+      <max value="0" />
+    </element>
+    <element id="ProcedureRequest.relevantHistory">
+      <path value="ProcedureRequest.relevantHistory" />
       <max value="0" />
     </element>
   </differential>

@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="oridashi-diagnosticreport" />
   <meta>
-    <lastUpdated value="2017-08-16T20:06:51.006+10:00" />
+    <lastUpdated value="2017-08-20T21:41:33.572+10:00" />
   </meta>
   <url value="http://oridashi.com.au/fhir/StructureDefinition/oridashi-diagnosticreport" />
   <name value="Oridashi Investigation Report" />
@@ -81,6 +81,13 @@
     <element id="DiagnosticReport.specimen">
       <path value="DiagnosticReport.specimen" />
       <max value="0" />
+    </element>
+    <element id="DiagnosticReport.result">
+      <path value="DiagnosticReport.result" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://oridashi.com.au/fhir/StructureDefinition/oridashi-observation" />
+      </type>
     </element>
     <element id="DiagnosticReport.imagingStudy">
       <path value="DiagnosticReport.imagingStudy" />

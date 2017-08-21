@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="oridashi-fasmilymemberhistory" />
+  <meta>
+    <lastUpdated value="2017-08-20T20:57:12.177+10:00" />
+  </meta>
+  <url value="http://oridashi.com.au/fhir/StructureDefinition/oridashi-familymemberhistory" />
+  <name value="Oridashi Family Member History" />
+  <title value="Oridashi Family Melber History" />
+  <status value="draft" />
+  <date value="2017-08-20T20:32:24.056+10:00" />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="FamilyMemberHistory" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="FamilyMemberHistory.identifier">
+      <path value="FamilyMemberHistory.identifier" />
+      <max value="0" />
+    </element>
+    <element id="FamilyMemberHistory.definition">
+      <path value="FamilyMemberHistory.definition" />
+      <max value="0" />
+    </element>
+    <element id="FamilyMemberHistory.notDone">
+      <path value="FamilyMemberHistory.notDone" />
+      <max value="0" />
+    </element>
+    <element id="FamilyMemberHistory.notDoneReason">
+      <path value="FamilyMemberHistory.notDoneReason" />
+      <max value="0" />
+    </element>
+    <element id="FamilyMemberHistory.date">
+      <path value="FamilyMemberHistory.date" />
+      <min value="1" />
+    </element>
+    <element id="FamilyMemberHistory.name">
+      <path value="FamilyMemberHistory.name" />
+      <max value="0" />
+    </element>
+    <element id="FamilyMemberHistory.gender">
+      <path value="FamilyMemberHistory.gender" />
+      <max value="0" />
+    </element>
+    <element id="FamilyMemberHistory.born[x]">
+      <path value="FamilyMemberHistory.born[x]" />
+      <max value="0" />
+    </element>
+    <element id="FamilyMemberHistory.age[x]">
+      <path value="FamilyMemberHistory.age[x]" />
+      <max value="0" />
+    </element>
+    <element id="FamilyMemberHistory.estimatedAge">
+      <path value="FamilyMemberHistory.estimatedAge" />
+      <max value="0" />
+    </element>
+    <element id="FamilyMemberHistory.deceased[x]">
+      <path value="FamilyMemberHistory.deceased[x]" />
+      <type>
+        <code value="boolean" />
+      </type>
+      <type>
+        <code value="Age" />
+      </type>
+    </element>
+    <element id="FamilyMemberHistory.reasonCode">
+      <path value="FamilyMemberHistory.reasonCode" />
+      <max value="0" />
+    </element>
+    <element id="FamilyMemberHistory.reasonReference">
+      <path value="FamilyMemberHistory.reasonReference" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

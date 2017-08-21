@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="oridashi-immunisation" />
   <meta>
     <lastUpdated value="2017-08-16T17:36:00.68+10:00" />
   </meta>
