@@ -1,10 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="oridashi-visit" />
   <meta>
     <lastUpdated value="2017-08-16T17:58:02.677+10:00" />
   </meta>
-  <url value="http://oridashi.com.au/fhir/StructureDefinition/oridashi-encounter" />
+  <url value="http://oridashi.com.au/fhir/StructureDefinition/oridashi-visit" />
   <name value="Oridashi Visit" />
   <title value="Oridashi Visit" />
   <status value="draft" />
